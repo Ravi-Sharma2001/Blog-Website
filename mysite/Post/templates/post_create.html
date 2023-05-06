@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<div class="create-post">
+    <h2>Create an Awesome new Post</h2>
+    <form  class="site-form" action="/Post/create/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="Create">
+    </form>
+</div>
+<script scr="/static/slugify.js"></script>
+
+{% endblock %}

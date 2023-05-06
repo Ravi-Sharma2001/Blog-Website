@@ -1,0 +1,17 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="wrapper">
+<h1>Posts</h1>
+</div>
+<div class="Posts">
+    {% for post in posts %}
+        <div class="post">
+            <h2><a href="{% url 'Post:detail' post.Slug %}">{{post.Title}}</a></h2>
+            <p>{{post.snippet}}</p>
+            <p class="author">added by {{post.author.username}}</p>
+            <p>{{post.Date}}</p> 
+        </div>
+    {% endfor %}
+</div>
+{% endblock %} 

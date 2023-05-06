@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<div class="post-detail">
+    <div class="post">
+        <img src="{{post.thumb.url}}">
+        <h2>{{post.Title}}</h2>
+        <p> {{post.Body}}</p>
+        <p>{{post.Date}}</p>
+    </div>
+</div>
+
+{% endblock %}
